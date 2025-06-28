@@ -112,8 +112,8 @@
             <div class="sidebar-button" id="sidebar-popular" href="../sidebar/popular.html">Popular</div>
             <div class="sidebar-button category" id="category-button">
                 Category
-                <svg id="category-arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
-                    fill="#ffffff">
+                <svg id="category-arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                    width="24px" fill="#ffffff">
                     <path d="M480-344 240-584l56-56 184 184 184-184 56 56-240 240Z" />
                 </svg>
             </div>
@@ -126,8 +126,7 @@
     </div>
     <div id="main-episode-page" class="main-episode-page">
         <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/-LR9oMDkAoc"
-                title="YouTube video player" frameborder="0"
+            <iframe id="episode-iframe" width="560" height="315" src="" title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;  web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
@@ -135,47 +134,49 @@
             <div class="episode-page-details epd-first">
                 <div class="epd-first-top">
                     <div class="epd-first-top first-part">
-                        <a class="first-part-anime-title" href="../animePages/animeMainPage.html">FAIRY TAIL</a>
+                        <a class="first-part-anime-title" href="../animePages/animeMainPage.html" id="a-title">${aTitle}</a>
                         |
-                        <div class="first-part-rating">4.8 ★</div>
+                        <div class="first-part-rating" id="a-score">${aScore}</div>
                     </div>
-                    <svg class="add-to-watchlist-icon" xmlns="http://www.w3.org/2000/svg" height="25px"
-                        viewBox="0 -960 960 960" width="25px" fill="#ffffff">
-                        <path
-                            d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
-                    </svg>
                 </div>
-                <div class="epd-ep-title">Episode 1 - The Fairy Tail</div>
-                <div class="epd-language">Sub | Dub</div>
-                <div class="epd-description">Across the Fiore kingdom, wizards join
-                    guilds and make their pay by filling magical needs—but one guild has a reputation as the
-                    roughest, rowdiest, most dangerous of all: Fairy Tail!
+                <div id="e-title" class="epd-ep-title">${eTitle}</div>
+                <div id="e-language" class="epd-language">${aLanguage}</div>
+                <div id="e-des" class="epd-description">${eDescription}
                 </div>
                 <div class="episode-list-endline"></div>
             </div>
             <div class="episode-change-section">
-                <div class="episode-change-card-container" id="previous-episode">
+                <a class="episode-change-card-container" id="previous-episode">
                     <div class="eccc-heading">PREVIOUS EPISODE</div>
                     <div class="episode-change-card">
-                        <img class="ecc-image"
+                        <img id="p-ep-img" class="ecc-image"
                             src="https://img1.ak.crunchyroll.com/i/spire1-tmb/00aacbb8bcfe784b3c8e728b269af0821644957412_full.jpg" />
                         <div class="episode-change-card-container ecc-text-section" id="epd-text-section">
-                            <div class="epd-ep-title for-card">Episode 2 - The Fairy Tail</div>
-                            <div class="epd-language ecc-language">Sub | Dub</div>
+                            <div id="p-ep-title" class="epd-ep-title for-card">Episode 2 - The Fairy Tail</div>
+                            <div id="ecc-p-language" class="epd-language ecc-language">${aLanguage}</div>
                         </div>
                     </div>
-                </div>
-                <div class="episode-change-card-container" id="next-episode">
+                </a>
+                <a class="episode-change-card-container" id="next-episode">
                     <div class="eccc-heading">NEXT EPISODE</div>
                     <div class="episode-change-card">
-                        <img class="ecc-image"
+                        <img id="n-ep-img" class="ecc-image"
                             src="https://img1.ak.crunchyroll.com/i/spire1-tmb/00aacbb8bcfe784b3c8e728b269af0821644957412_full.jpg" />
                         <div class="episode-change-card-container ecc-text-section" id="epd-text-section">
-                            <div class="epd-ep-title for-card">Episode 3 - The Fairy Tail</div>
-                            <div class="epd-language ecc-language">Sub | Dub</div>
+                            <div id="n-ep-title" class="epd-ep-title for-card">Episode 3 - The Fairy Tail</div>
+                            <div id="ecc-n-language" class="epd-language ecc-language">${aLanguage}</div>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="site-footer">
+                <a href="../legalStuff/terms.html" target="_blank">Terms of Services</a>
+                <div class="sf-separator">|</div>
+                <a href="../legalStuff/privacy.html" target="_blank">Privacy Policies</a>
+                <div class="sf-separator">|</div>
+                <a href="../legalStuff/about.html">About</a>
+                <div class="sf-separator">|</div>
+                <a href="../legalStuff/credits.html">Credits</a>
             </div>
         </div>
     </div>

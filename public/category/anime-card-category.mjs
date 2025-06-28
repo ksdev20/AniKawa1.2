@@ -95,7 +95,7 @@ function main() {
                 }
             });
     }
-    slidersHandler();
+    slidersHandler('category');
 }
 
 function getTitle(anime) {
@@ -132,6 +132,7 @@ function matchCategories(anime, cat, mainCategory) {
 
 document.addEventListener('DOMContentLoaded', () => {
     fetchWatchlist(true).then(() => {
+        document.querySelector(".homepage-loading-content").classList.add("hidden");
         main();
     });
 });

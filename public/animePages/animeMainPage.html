@@ -9,7 +9,7 @@
         content="Watch your favorite anime online for free. High-quality anime streaming website inspired by Frunchyroll." />
     <meta name="keywords" content="anime, watch anime, free anime, crunchyroll clone, anime streaming" />
     <meta name="author" content="Wayne" />
-    <title>Anime Page</title>
+    <title id="page-title">Anime Page</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/animeMainStyle.css" />
     <link rel="icon" type="image/png" href="../assets/icons/cr-logo-removebg-preview.png" />
@@ -38,7 +38,7 @@
             <a class="nav-right-block" href="../log-sign/search.html">
                 <img class="nav-right-logo" src="../assets/icons/search.svg" />
             </a>
-            <div id="watchlist-btn-index" class="nav-right-block">
+            <div id="watchlist-btn-index" class="nav-right-block w-navbar">
                 <img class="nav-right-logo" src="../assets/icons/bookmark-save.svg" />
             </div>
             <div class="nav-right-block" id="person-menu">
@@ -138,12 +138,16 @@
                     <div class="titles-section">
                         <div id="title-english" class="poetsen-one-regular english"></div>
                         <div id="title-romaji" class="poetsen-one-regular romaji"></div>
-                        <svg id="wBtn-animepage" class="watchlist-btn-animepage hidden" xmlns="http://www.w3.org/2000/svg"
-                            height="30px" viewBox="0 -960 960 960" width="30px" fill="#ffffff">
-                            <path
-                                d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
-                        </svg>
-                        <span class="loader loader-wbtn"></span>
+                        <div class="watchlist-section-ap">
+                            <div id="wbtn-label"></div>
+                            <svg id="wBtn-animepage" class="watchlist-btn-animepage hidden"
+                                xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px"
+                                fill="#ffffff">
+                                <path
+                                    d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Zm80-122 200-86 200 86v-518H280v518Zm0-518h400-400Z" />
+                            </svg>
+                            <span class="loader loader-wbtn"></span>
+                        </div>
                     </div>
                     <div class="description-section">
                         <div class="des-only">
@@ -172,8 +176,10 @@
                             <div class="filter-name">SORT</div>
                         </div>
                         <div id="dropdown-new-pop" class="dropdown-new-pop">
-                            <div id="sort-new" class="dropdown-new-pop-btn pop-new" data-filter="new">Descending (by order)</div>
-                            <div id="sort-old" class="dropdown-new-pop-btn pop-new" data-filter="old">Ascending (by order)</div>
+                            <div id="sort-new" class="dropdown-new-pop-btn pop-new" data-filter="new">Descending (by
+                                order)</div>
+                            <div id="sort-old" class="dropdown-new-pop-btn pop-new" data-filter="old">Ascending (by
+                                order)</div>
                         </div>
                     </div>
                 </div>
@@ -226,7 +232,7 @@
             </div>
             <div class="site-footer">
                 <a href="/legalStuff/terms.html" target="_blank">Terms of Services</a>
-                <div class="sf-separator" target="_blank">|</div>
+                <div class="sf-separator">|</div>
                 <a href="/legalStuff/privacy.html" target="_blank">Privacy Policies</a>
                 <div class="sf-separator">|</div>
                 <a href="/legalStuff/about.html">About</a>

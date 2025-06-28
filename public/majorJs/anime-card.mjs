@@ -314,9 +314,11 @@ export function slidersHandler(caller) {
         function lock() {
             btnL.classList.add("disable-click");
             btnR.classList.add("disable-click");
+            sliderContainer.classList.add("disable-click");
             setTimeout(() => {
                 btnL.classList.remove("disable-click");
                 btnR.classList.remove("disable-click");
+                sliderContainer.classList.remove("disable-click");
             }, 400);
         }
 

@@ -32,10 +32,11 @@ app.use(cors({
     credentials: true
 }));
 app.use(bodyParser.json());
-/*
-const liveReloadServer = livereload.createServer();
-liveReloadServer.watch(path.join(__dirname, 'public'));
-app.use(connectLivereload());*/
+if (process.env.NODE_END == 'development') {
+    const liveReloadServer = livereload.createServer();
+    liveReloadServer.watch(path.join(__dirname, 'public'));
+    app.use(connectLivereload());
+}
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.post("/api/signup", async (req, res) => {

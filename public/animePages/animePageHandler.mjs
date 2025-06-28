@@ -1,11 +1,13 @@
 const mainSkeleton = document.getElementById("main-skeleton");
 const mainContent = document.getElementById("main");
+const wBtnLabel = document.getElementById("wbtn-label");
 let hasRunUpdateMC = false;
 let isDoneWithWatchlistAndMLTList = false;
 
 function updateMainContent(anime) {
     const anilist = anime.anilist;
 
+    const pageTitle = document.getElementById("page-title");
     const topB = document.getElementById("top-banner");
     const cardImg = document.getElementById("card-image");
     const tE = document.getElementById("title-english");
@@ -14,13 +16,14 @@ function updateMainContent(anime) {
     const omd = document.getElementById("other-metadata");
     const titleS = document.getElementById("season-text");
 
+    pageTitle.textContent = `${anilist.title} | Anikawa`;
     topB.style.backgroundImage = `url(${anilist.bannerImage})`;
     cardImg.src = `${anilist.coverImage}`;
-    tE.innerHTML = `${anilist.title}`;
-    tR.innerHTML = `${anilist.romaji}`;
+    tE.textContent = `${anilist.title}`;
+    tR.textContent = `${anilist.romaji}`;
     des.innerHTML = `${anilist.description}`;
     omd.innerHTML = generateSideData(anilist);
-    titleS.innerHTML = `S1: ${anilist.title}`;
+    titleS.textContent = `S1: ${anilist.title}`;
 
     cardImg.addEventListener('load', () => {
         mainSkeleton.classList.add("hidden");
@@ -111,14 +114,16 @@ function populateSlider(sliderElement, animeArray, fn = () => Boolean, cat, main
 
         const watchlistBtn = cardElement.querySelector(".card-action-watchlist");
 
-        watchlistBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleWatchlist(anime, 'watchlist', watchlistBtn).then(() => fetchWatchlist(true));
-        });
-
         const title = anime?.anilist?.title || anime?.cleanTitle;
 
         const isInWatchlist = checkWatchlist(title);
+
+        watchlistBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleWatchlist(anime, 'watchlist', watchlistBtn).then(() => {
+                fetchWatchlist(true);
+            });
+        });
 
         if (isInWatchlist) {
             const path = "M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z";
@@ -221,7 +226,11 @@ function loadMainData(newFirst = false) {
 
     if (wBtnAnimepage) {
         wBtnAnimepage.addEventListener('click', () => {
-            toggleWatchlist(animeJson, 'watchlist', wBtnAnimepage);
+            toggleWatchlist(animeJson, 'watchlist', wBtnAnimepage).then(() => {
+                fetchWatchlist(true).then(() => {
+                    checkWatchlist(animeTitle) ? wBtnLabel.innerHTML = 'In Watchlist' : wBtnLabel.innerHTML = 'Add to Watchlist';
+                });
+            });
         });
     }
 
@@ -232,6 +241,9 @@ function loadMainData(newFirst = false) {
             if (checkWatchlist(animeTitle)) {
                 const path = "M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z";
                 wBtnAnimepage.querySelector('path').setAttribute('d', path);
+                wBtnLabel.innerHTML = 'In Watchlist';
+            } else {
+                wBtnLabel.innerHTML = 'Add to watchlist';
             }
             wBtnAnimepage.classList.remove("hidden");
             document.querySelector(".loader.loader-wbtn").classList.add("hidden");
