@@ -1473,12 +1473,17 @@ body {
         min-width: 155px;
     }
 
-    .np-watchlist {
-        grid-template-columns: repeat(auto-fit, minmax(155px, 155px));
+    .new-pop-anime-card{
+        min-width: 155px;
     }
 
     .new-pop-anime-list {
-        grid-template-columns: repeat(auto-fit, minmax(165px, 165px));
+        grid-template-columns: repeat(auto-fill, minmax(165px, 165px));
+    }
+
+    .np-watchlist {
+        gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(165px, 165px));
     }
 
     .slider-btn {

@@ -716,9 +716,9 @@ body {
     .episode-page-details{
         padding: 0 15px;
     }
-    .anime-card-first{
+    /*.anime-card-first{
         min-width: 200px;
-    }
+    }*/
     .epd-ep-title{
         font-size: 20px;
     }
