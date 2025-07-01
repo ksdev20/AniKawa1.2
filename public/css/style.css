@@ -374,7 +374,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #ff5e00;
+    background-color: #8c52ff;
     color: black;
     font-weight: 600;
     font-size: 15px;
@@ -384,7 +384,7 @@ body {
 }
 
 .start-watching-btn:hover {
-    background-color: #ff7b2e;
+    background-color: #8c52ff;
 }
 
 .watch-logo {
@@ -397,18 +397,18 @@ body {
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    border: 2px solid #fa7223;
+    border: 2px solid #8c52ff;
     height: 40px;
     width: 40px;
     cursor: pointer;
 }
 
 .watchlist-btn:hover {
-    border-color: #f7813e;
+    border-color: #794cd3;
 }
 
 .watchlist-btn:hover .hero-action-watchlist {
-    fill: #f7813e;
+    fill: #8c52ff;
 }
 
 /*HERO SECTION LOADING HANDLER*/
@@ -659,7 +659,7 @@ body {
 }
 
 .slider-btn:hover .s-btn {
-    fill: #ff640a;
+    fill: #8c52ff;
 }
 
 .hidden {
@@ -1028,13 +1028,13 @@ body {
     color: black;
     height: 40px;
     width: 170px;
-    background-color: #ff640a;
+    background-color: #8c52ff;
     cursor: pointer;
     margin-left: auto;
 }
 
 .start-trial-btn:hover {
-    background-color: #f7813e;
+    background-color: #8c52ff;
 }
 
 .mid-image-container {
@@ -1134,13 +1134,13 @@ body {
 .anime-card-2-watch-btn {
     width: 200px;
     height: 50px;
-    background-color: #ff640a;
+    background-color: #8c52ff;
     font-size: medium;
     color: black;
 }
 
 .anime-card-2-watch-btn:hover {
-    background-color: #f7813e;
+    background-color: #8c52ff;
     cursor: pointer;
 }
 
@@ -1151,23 +1151,23 @@ body {
     width: 200px;
     height: 43px;
     gap: 5px;
-    border: 2px solid #ff640a;
+    border: 2px solid #8c52ff;
     background-color: transparent;
 }
 
 .anime-card-2-watchlist-text {
-    color: #ff640a;
+    color: #8c52ff;
     font-size: 15px;
 }
 
 .anime-card-2-watchlist-btn:hover {
     cursor: pointer;
-    border-color: #f7813e;
-    color: #f7813e;
+    border-color: #8c52ff;
+    color: #8c52ff;
 }
 
 .anime-card-2-watchlist-btn:hover .wat-icon-ac-2 {
-    fill: #f7813e;
+    fill: #8c52ff;
 }
 
 
@@ -1574,7 +1574,7 @@ body {
 }
 
 .progress-bar.active {
-    background-color: #ff640a;
+    background-color: #8c52ff;
 }
 
 /*LOADING CONTENT N MAIN CONTENT LAYOUT HANDLER*/

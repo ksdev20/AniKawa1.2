@@ -195,7 +195,7 @@ input:-webkit-autofill {
 .create-account-btn.active{
     border: none;
     color: black;
-    background-color: #ff640a;
+    background-color: #8c52ff;
     cursor: pointer;
 }
 
@@ -211,7 +211,7 @@ input:-webkit-autofill {
 }
 
 .to-login{
-    color: #ff640a;
+    color: #8c52ff;
     text-decoration: none;
     font-size: 15px;
     cursor: pointer;
@@ -230,9 +230,9 @@ input:-webkit-autofill {
 }
 
 .term-policy-link{
-    color: #ff640a;
+    color: #8c52ff;
     text-decoration: underline;
-    text-decoration-color: #ff640a;
+    text-decoration-color: #8c52ff;
     font-size: 15px;
     font-weight: bolder;
     cursor: pointer;

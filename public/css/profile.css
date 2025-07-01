@@ -73,7 +73,7 @@
     width: 48px;
     height: 48px;
     border: 5px solid #FFF;
-    border-bottom-color: #ff5722;
+    border-bottom-color: #8c52ff;
     border-radius: 50%;
     display: inline-block;
     box-sizing: border-box;
@@ -368,7 +368,7 @@
 }
 
 .banners-list::-webkit-scrollbar-thumb:hover {
-    background-color: #ff5722;
+    background-color: #8c52ff;
 }
 
 .banner-section {
@@ -456,7 +456,7 @@
 }
 
 .avatars-list::-webkit-scrollbar-thumb:hover {
-    background-color: #ff5722;
+    background-color: #8c52ff;
 }
 
 .avatar-section {
@@ -546,7 +546,7 @@
 
 .wh-btn.active {
     color: white;
-    border-color: orangered;
+    border-color: #8c52ff;
 }
 
 .wh-btn:hover {
@@ -684,7 +684,7 @@
 
 .goto-home-btn {
     display: flex;
-    background-color: #ff640a;
+    background-color: #8c52ff;
     padding: 10px 20px;
     color: black;
     font-weight: bold;
@@ -693,7 +693,7 @@
 }
 
 .goto-home-btn:hover {
-    background-color: #f37c37;
+    background-color: #8759e4;
 }
 
 .wh-ac {
@@ -761,7 +761,7 @@
 }
 
 .search-input:focus {
-    border-color: orangered;
+    border-color: #8c52ff;
 }
 
 input[type="search"]::-webkit-search-cancel-button {

@@ -16,13 +16,13 @@ function createAnimeCardNewPop(anime) {
                         <div class="anime-card-hover-actions">
                             <div class="tooltip" data-tip="Play S1 E1">
                                 <svg class="card-action-play" xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -960 960 960" width="35px"
-                                fill="#ff640a">
+                                fill="#8c52ff">
                                 <path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z" />
                                 </svg>
                             </div>
                             <div class="tooltip" data-tip="Remove From Watchlist">
                                 <svg class="card-action-watchlist" xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -960 960 960" width="28px"
-                                fill="#ff640a">S
+                                fill="#8c52ff">S
                                 <path
                                     d="M200-120v-640q0-33 23.5-56.5T280-840h400q33 0 56.5 23.5T760-760v640L480-240 200-120Z" />
                                 </svg>
@@ -56,7 +56,7 @@ function createEpisodeCard(episode) {
             </div>
             <div class="episode-play-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" height="40px" width="40px"
-                    viewBox="0 -960 960 960" fill="#ff640a">
+                    viewBox="0 -960 960 960" fill="#8c52ff">
                     <path
                         d="M360-272.31v-415.38L686.15-480 360-272.31ZM400-480Zm0 134 211.54-134L400-614v268Z" />
                 </svg>
