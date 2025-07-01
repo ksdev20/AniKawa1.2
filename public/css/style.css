@@ -562,6 +562,9 @@ body {
     .hero-description{
         display: none;
     }
+    .hs-des-loading{
+        display: none;
+    }
     .hero-section-overlay{
         padding: 0;
     }
