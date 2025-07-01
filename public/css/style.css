@@ -380,6 +380,7 @@ body {
     font-size: 15px;
     width: auto;
     height: 40px;
+    padding-right: 5px;
     cursor: pointer;
 }
 
@@ -1132,7 +1133,8 @@ body {
 }
 
 .anime-card-2-watch-btn {
-    width: 200px;
+    width: 210px;
+    padding-right: 10px;
     height: 50px;
     background-color: #8c52ff;
     font-size: medium;
