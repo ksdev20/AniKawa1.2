@@ -72,7 +72,7 @@ function scrollHandler() {
 }
 
 function mainScrollFn(i = null) {
-    idx = i ? i : (idx + 1) % bars.length;
+    idx = (typeof i == 'number') ? i : (idx + 1) % bars.length;
     const target = cards[idx];
     heroSlider.scrollTo({ left: target.offsetLeft, behavior: 'smooth' });
 

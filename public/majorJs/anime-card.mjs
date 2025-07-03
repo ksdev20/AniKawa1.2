@@ -2,6 +2,7 @@ import { aniOneAsiaDataAnilist3 } from "../data/aniOneAsiaDataAnilist3.mjs";
 
 let dataBaseWatchlist = [];
 let hasFetched = false;
+const isMobile= window.matchMedia("(pointer: coarse)").matches;
 
 const isIndex = window.location.pathname.endsWith("index.html");
 
@@ -81,6 +82,11 @@ export function createAndAppendAnimeCard(anime, sliderElement, fn = () => "", di
         cardElement.addEventListener('click', () => {
             localStorage.setItem('selectedAnime', JSON.stringify(anime));
             window.location.href = isIndex ? "./animePages/animeMainPage.html" : "../animePages/animeMainPage.html";
+        });
+    } else if (disableCardClick){
+        cardElement.querySelector('.hs-anime-img').addEventListener('click', () => {
+            localStorage.setItem('selectedAnime', JSON.stringify(anime));
+            window.location.href = "./animePages/animeMainPage.html";
         });
     }
 
@@ -281,8 +287,9 @@ export function toggleWatchlist(data, method, btn, delFromHis = false, ac2BtnTex
         });
 }
 
-export function slidersHandler(caller) {
+export function slidersHandler(caller, isMobile = false) {
     let sliderWrapper;
+    let isScrolling;
 
     if (caller == 'category'){
         sliderWrapper = document.querySelectorAll(".slider-content-wrapper.sl");
@@ -292,6 +299,21 @@ export function slidersHandler(caller) {
         sliderWrapper = document.querySelectorAll(".slider-content-wrapper");
     }
     /*console.log(sliderWrapper);*/
+
+    if (isMobile){
+        sliderWrapper.forEach(sl => {
+            sl.addEventListener('scroll', () => {
+                sl.classList.add("show-scrollbar");
+
+                clearTimeout(isScrolling);
+
+                isScrolling = setTimeout(() => {
+                    sl.classList.remove("show-scrollbar");
+                }, 100);
+            });
+        });
+        return;
+    }
 
     sliderWrapper.forEach(sw => {
         const sliderContainer = sw.querySelector(".slider-container");
@@ -468,6 +490,6 @@ if (slider) {
         sliders.forEach(s => {
             populateAnimeCard2(s, aniOneAsiaDataAnilist3, thisYearTopByCategory);
         });
-        if (document.getElementById("hpac")) slidersHandler('index');
+        if (document.getElementById("hpac") && !isMobile) slidersHandler('index');
     });
 }

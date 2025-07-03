@@ -1,3 +1,5 @@
+const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
 const mainSkeleton = document.getElementById("main-skeleton");
 const mainContent = document.getElementById("main");
 const wBtnLabel = document.getElementById("wbtn-label");
@@ -248,7 +250,7 @@ function loadMainData(newFirst = false) {
             wBtnAnimepage.classList.remove("hidden");
             document.querySelector(".loader.loader-wbtn").classList.add("hidden");
             populateSlider(MLTSlider, aniOneAsiaDataAnilist3, matchCategories, 'Popular', mainCategory, secondCategory);
-            slidersHandler('animepage');
+            if (!isMobile) slidersHandler('animepage');
         });
         isDoneWithWatchlistAndMLTList = true;
     }

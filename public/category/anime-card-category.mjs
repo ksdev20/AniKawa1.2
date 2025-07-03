@@ -1,6 +1,8 @@
 import { createAndAppendAnimeCard, createAnimeCard, genreCheck, getCurrentDate, getYear, getScore, fetchWatchlist, slidersHandler } from "../majorJs/anime-card.mjs";
 import { aniOneAsiaDataAnilist3 } from "../data/aniOneAsiaDataAnilist3.mjs";
 
+const isMobile = window.matchMedia("(pointer: coarse)").matches;
+
 function createSlider(cat) {
     return `<div id="${cat}-slider" class="anime-slider-section cat-slider">
         <div class="slider-heading cat-slider-heading">
@@ -95,7 +97,7 @@ function main() {
                 }
             });
     }
-    slidersHandler('category');
+    if (!isMobile) slidersHandler('category');
 }
 
 function getTitle(anime) {

@@ -683,16 +683,8 @@ body {
     align-items: flex-start;
     overflow: auto;
     padding: 0 20px;
-}
-
-.slider-container::-webkit-scrollbar {
-    display: none;
-    height: 6px;
-}
-
-.slider-container::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .anime-card {
@@ -738,7 +730,7 @@ body {
 }
 
 /*ANIME CARD FOR MOBILE*/
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
     * {
         outline: none;
         -webkit-tap-highlight-color: transparent;
@@ -1535,7 +1527,9 @@ body {
 .hs-slider {
     position: relative;
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
+    touch-action: none;
+    pointer-events: auto;
     width: 100%;
     overflow-y: hidden;
     user-select: none;
@@ -1609,5 +1603,11 @@ body {
     }
     .dub-sub-loading{
         width: 50px;
+    }
+}
+
+@media (max-width: 600px){
+    .slider-btn-section{
+        display: none;
     }
 }

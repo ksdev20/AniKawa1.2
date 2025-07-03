@@ -221,6 +221,10 @@ app.post('/api/logout', (req, res) => {
     res.status(200).json({ success: true, message: "Successfully logged out" });
 });
 
+app.get('/health', (req, res) => {
+    return res.status(200).json({ message: "The site is working fine" });
+});
+
 app.listen(PORT, () => {
     console.log(`✅ Server running at http://localhost:${PORT}`);
 });
